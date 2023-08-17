@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+</head>
+<body class="bg-red-400 min-h-screen">
+    <header class="bg-white">
+        <div class="flex justify-between items-center mx-[89px] h-[72px] bg-white">
+            <img src="./assets/giarddesign.svg" alt="giarddesign logo" class="h-5">
+            <button id="hamburger-button" class="sm:hidden">&#9776;</button>
+            <nav class="hidden sm:block ">
+                <ul class="flex gap-12">
+                    <li>
+                        <a href="#" class="after:content-['qw'] after:bg-[url('./assets/arrow-down.svg')]">Oferta</a>
+                        <ul class="hidden">
+                            <li>Projekty</li>
+                            <li>Wizualizacje</li>
+                            <li>Realizacje</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">O firmie</a></li>
+                    <li><a href="#">Realizacje</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><img src="" alt=""></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="intro" class="bg-light-beige"> 
+            <div id="carouselExampleCaptions" class="relative" data-te-carousel-init data-te-ride="carousel">
+                <!--Carousel items-->
+                <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+                    <!--First item-->
+                    <div class="float-left -mr-[100%] w-full h-[46rem] transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-active data-te-carousel-item style="backface-visibility: hidden">
+                        <div class="grid grid-cols-2 gap-16 items-center h-full" >
+                            <div class="ml-[89px] text-left text-dark-grey">
+                                <h1 class="mb-16">Nowoczesna aranżacja Twojego ogrodu</h1>
+                                <p>Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu..</p>
+                                <div>
+                                    <button>Skontaktuj się z nami</button>
+                                    <button>Zobacz nasze realizacje</button>
+                                </div>
+                            </div> 
+                            <img src="./assets/intro-photo-1.png" class="object-cover w-full h-full min-h-0" alt="garden photo 01" />
+                        </div>
+                    </div>
+                    <!--Second item-->
+                    <div class="float-left -mr-[100%] h-[46rem] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-item style="backface-visibility: hidden">
+                        <div class="grid grid-cols-2 gap-16 items-center h-full">
+                            <img src="./assets/intro-photo-2.png" class="object-cover w-full h-full min-h-0" alt="garden photo 02" />
+                            <div class="mr-[89px] text-left text-dark-grey">
+                                <h1 class="mb-16">Nowoczesna aranżacja Twojego ogrodu</h1>
+                                <p>Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu..</p>
+                                <div>
+                                    <button>Skontaktuj się z nami</button>
+                                    <button>Zobacz nasze realizacje</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Third item-->
+                    <!-- <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-item style="backface-visibility: hidden">
+                        <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg" class="block w-full" alt="..." />
+                        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                            <h5 class="text-xl">Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div> -->
+                </div>
+            <!--Carousel controls - prev item-->
+            <button
+              class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide="prev">
+              <span class="inline-block h-8 w-8">
+               
+                </svg>
+              </span>
+              <span
+                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                >Previous</span
+              >
+            </button>
+            <!--Carousel controls - next item-->
+            <button
+              class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide="next">
+              <span class="inline-block h-8 w-8">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-6 w-6">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </span>
+              <span
+                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                >Next</span
+              >
+            </button>
+          </div>
+        </section>
+        <section id="oferta">
+            <h5>Oferta</h5>
+            <article>
+                <h2>Działamy kompleksowo</h2>
+                <p>
+                    Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

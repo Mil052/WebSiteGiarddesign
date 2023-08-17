@@ -1,11 +1,13 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: 'production',
   performance: {
-    hints: 'warning',
-    maxEntrypointSize: 1024000,
-    maxAssetSize: 1024000,
+    hints: false,
+    maxEntrypointSize: 2048000,
+    maxAssetSize: 2048000,
 },
   entry: './src/index.js',
   output: {
@@ -16,6 +18,7 @@ module.exports = {
   devtool: 'eval-source-map',
   devServer: {
     static: './build',
+    watchFiles: ['src/**/*']
   },
   module: {
     rules: [
@@ -25,9 +28,13 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|jpg|gif)$/i,
-        type: 'asset/inline'
+        test: /\.(png|jpg|gif|svg)$/i,
+        type: 'asset/inline',
       }
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({template: './src/index.html'}),
+    new CopyPlugin({patterns: [{ from: "src/assets", to: "assets" }]})
+  ],
 };

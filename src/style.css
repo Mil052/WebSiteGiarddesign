@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
+/* font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+    @apply font-montserrat font-medium text-4xl lg:text-6xl;
+}
+
+button {
+    @apply p-3 font-inter text-base border rounded-full;
+}
