@@ -33,8 +33,12 @@ font-family: 'Montserrat', sans-serif; */
     h2 {
         @apply font-montserrat font-medium text-3xl lg:text-5xl;
     }
-    
+
+    h3 {
+        @apply font-montserrat font-medium text-3xl lg:text-[40px];
+    }
+
     button {
-        @apply p-3 font-inter text-base border rounded-full;
+        @apply py-3 px-6 font-inter text-base rounded-full;
     }
 }
