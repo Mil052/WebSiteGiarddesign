@@ -6,10 +6,22 @@ font-family: 'Montserrat', sans-serif; */
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-    @apply font-montserrat font-medium text-4xl lg:text-6xl;
-}
+@layer base {
+    .transform-smooth {
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 600ms;
+    }
 
-button {
-    @apply p-3 font-inter text-base border rounded-full;
+    h1 {
+        @apply font-montserrat font-medium text-4xl lg:text-6xl;
+    }
+    
+    h2 {
+        @apply font-montserrat font-medium text-3xl lg:text-5xl;
+    }
+    
+    button {
+        @apply p-3 font-inter text-base border rounded-full;
+    }
 }

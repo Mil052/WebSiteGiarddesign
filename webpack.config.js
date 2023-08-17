@@ -15,7 +15,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     clean: true,
   },
-  devtool: 'eval-source-map',
+  devtool: 'eval',
   devServer: {
     static: './build',
     watchFiles: ['src/**/*']
