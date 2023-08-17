@@ -3,7 +3,13 @@ import { Carousel, initTE } from "tw-elements";
 import Masonry from 'masonry-layout';
 
 initTE({ Carousel });
-const masonry = new Masonry();
+
+const grid = document.getElementById('masonry-grid');
+const masonry = new Masonry(grid, {
+    columnWidth: '.masonry-sizer',
+    itemSelector: '.masonry-item',
+    gutter: 40
+  });
 
 console.log('main.js executed');
 
