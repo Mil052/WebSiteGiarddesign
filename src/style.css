@@ -12,18 +12,29 @@ font-family: 'Montserrat', sans-serif; */
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 600ms;
     }
+    .max-height-smooth {
+        transition-property: max-height;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 1000ms;
+    }
+
+    .padding-top-smooth {
+        transition-property: padding-top;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 1500ms;
+    }
 
     .two-columns {
-        width: calc(50% - 20px);
+        width: calc(50% - 22px);
     }
 
     .three-columns {
-        width: calc((100% - 80px) / 3);
+        width: calc((100% - 88px) / 3);
     }
 
     .masonry-item {
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 44px;
     }
 
     h1 {
@@ -40,5 +51,15 @@ font-family: 'Montserrat', sans-serif; */
 
     button {
         @apply py-3 px-6 font-inter text-base rounded-full;
+    }
+}
+
+@layer utilities {
+    .roll-up {
+        @apply max-h-[1450px] lg:max-h-[100vw];
+    }
+
+    .hide-background {
+        padding-top: 800px;
     }
 }

@@ -162,21 +162,32 @@
                 <button type="button">Poznaj nas bliżej</button>
             </div>
         </section>
-        <section class="bg-light-beige pt-[120px] pb-11">
+        <section id="realizacje" class="bg-light-beige pt-[120px]">
             <h5>Realizacje</h5>
             <h2 class="mb-24">Nasze projekty</h2>
-            <div id="masonry-grid">
-                <div class="masonry-item masonry-sizer sm:two-columns lg:three-columns"><img src="assets/gallery/photo-01.png" alt="photo-01" class="w-full"></div>
-                <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-02.png" alt="photo-02" class="w-full"></div>
-                <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-03.png" alt="photo-03" class="w-full"></div>
-                <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-04.png" alt="photo-04" class="w-full"></div>
-                <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-05.png" alt="photo-05" class="w-full"></div>
-                <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-06.png" alt="photo-06" class="w-full"></div>
-                <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-07.png" alt="photo-07" class="w-full"></div>
-                <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-08.png" alt="photo-08" class="w-full"></div>
-                <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-09.png" alt="photo-09" class="w-full"></div>
+            <div id="gallery-container" class="relative roll-up overflow-hidden max-height-smooth">
+                <div id="masonry-grid" class="h-auto">
+                    <div class="masonry-item masonry-sizer sm:two-columns lg:three-columns"><img src="assets/gallery/photo-01.png" alt="photo-01" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-02.png" alt="photo-02" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-03.png" alt="photo-03" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-04.png" alt="photo-04" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-05.png" alt="photo-05" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-06.png" alt="photo-06" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-07.png" alt="photo-07" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-08.png" alt="photo-08" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-09.png" alt="photo-09" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-10.png" alt="photo-10" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-11.png" alt="photo-11" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-12.png" alt="photo-12" class="w-full"></div>
+                </div>
+                <div class="h-[180px]">
+                    <div id="gallery-courtain" class="text-center absolute w-full bottom-0 pb-24 hide-background padding-top-smooth z-10 bg-gradient-to-t from-light-beige from-10% to-transparent">
+                        <button id="gallery-view-btn" class="border border-dark-grey">Rozwiń</button>
+                    </div>
+                </div>
             </div>
-            <button>Rozwiń</button>
+           
+            
         </section>
         <section id="instagram" class="bg-cream py-[60px] px-[89px]">
             <div class="flex justify-between items-end bg-bottle-green text-cream mx-[9%] py-[120px] px-[110px]">
