@@ -49,8 +49,20 @@ font-family: 'Montserrat', sans-serif; */
         @apply font-montserrat font-medium text-3xl lg:text-[40px];
     }
 
+    h4 {
+        @apply font-montserrat font-medium lg:text-3xl ;
+    }
+
+    p {
+        @apply font-inter text-base;
+    }
+
+    a {
+        @apply font-inter text-base;
+    }
+
     button {
-        @apply py-3 px-6 font-inter text-base rounded-full;
+        @apply py-3 px-6 font-inter text-base rounded-full border;
     }
 }
 
@@ -58,7 +70,6 @@ font-family: 'Montserrat', sans-serif; */
     .roll-up {
         @apply max-h-[1450px] lg:max-h-[100vw];
     }
-
     .hide-background {
         padding-top: 800px;
     }

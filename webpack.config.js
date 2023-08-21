@@ -12,12 +12,12 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true,
   },
   devtool: 'eval',
   devServer: {
-    static: './build',
+    static: './docs',
     watchFiles: ['src/**/*']
   },
   module: {

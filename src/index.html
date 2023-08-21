@@ -6,30 +6,30 @@
     <title>Document</title>
     <script src="main.js" defer></script>
 </head>
-<body class="bg-red-400 min-h-screen">
-    <header class="bg-white">
+<body class="min-h-screen">
+    <header class="bg-white fixed top-0 z-30 w-full">
         <div class="flex justify-between items-center mx-[89px] h-[72px] bg-white">
             <img src="./assets/giarddesign.svg" alt="giarddesign logo" class="h-5">
             <button id="hamburger-button" class="sm:hidden">&#9776;</button>
-            <nav class="hidden sm:block ">
-                <ul class="flex gap-12">
+            <nav class="relative hidden sm:block">
+                <ul class="flex gap-12 h-6">
                     <li>
-                        <a href="#" class="after:content-['qw'] after:bg-[url('./assets/arrow-down.svg')]">Oferta</a>
-                        <ul class="hidden">
-                            <li>Projekty</li>
-                            <li>Wizualizacje</li>
-                            <li>Realizacje</li>
+                        <a id="link-oferta" class="after:inline-block after:w-3 after:h-3 after:bg-[url('./assets/arrow-down.svg')] after:ml-1 hover:cursor-pointer">Oferta</a>
+                        <ul id="nav-oferta" class="hidden absolute top-12 w-full justify-around bg-cream p-8 origin-top animate-open-scale">
+                            <li><a href="#oferta">Projekty</a></li>
+                            <li><a href="#realizacje">Wizualizacje</a></li>
+                            <li><a href="#realizacje">Realizacje</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">O firmie</a></li>
-                    <li><a href="#">Realizacje</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                    <li><img src="" alt=""></li>
+                    <li><a href="#firma">O firmie</a></li>
+                    <li><a href="#realizacje">Realizacje</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><img src="./assets/magnifier.svg" alt="search"></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
+    <main class="mt-[72px]">
         <section id="intro" class="bg-light-beige"> 
             <div id="carouselExampleCaptions" class="relative" data-te-carousel-init data-te-ride="carousel">
                 <!--Carousel items-->
@@ -39,10 +39,10 @@
                         <div class="grid grid-cols-2 gap-16 items-center h-full" >
                             <div class="ml-[89px] text-left text-dark-grey">
                                 <h1 class="mb-16">Nowoczesna aranżacja Twojego ogrodu</h1>
-                                <p>Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu..</p>
+                                <p class="mb-[72px]">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu..</p>
                                 <div>
-                                    <button>Skontaktuj się z nami</button>
-                                    <button>Zobacz nasze realizacje</button>
+                                    <button class="bg-bottle-green border-bottle-green text-cream">Skontaktuj się z nami</button>
+                                    <button class="border-bottle-green text-bottle-green ml-9">Zobacz nasze realizacje</button>
                                 </div>
                             </div> 
                             <img src="./assets/intro-photo-1.png" class="object-cover w-full h-full min-h-0" alt="garden photo 01" />
@@ -54,10 +54,10 @@
                             <img src="./assets/intro-photo-2.png" class="object-cover w-full h-full min-h-0" alt="garden photo 02" />
                             <div class="mr-[89px] text-left text-dark-grey">
                                 <h1 class="mb-16">Nowoczesna aranżacja Twojego ogrodu</h1>
-                                <p>Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu..</p>
+                                <p class="mb-[72px]">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu..</p>
                                 <div>
-                                    <button>Skontaktuj się z nami</button>
-                                    <button>Zobacz nasze realizacje</button>
+                                    <button class="bg-bottle-green border-bottle-green text-cream">Skontaktuj się z nami</button>
+                                    <button class="border-bottle-green text-bottle-green ml-9">Zobacz nasze realizacje</button>
                                 </div>
                             </div>
                         </div>
@@ -105,20 +105,20 @@
             </button>
           </div>
         </section>
-        <section id="oferta" class="bg-cream px-[89px] pt-[120px] pb-[160px]">
-            <h5>Oferta</h5>
-            <article class="pb-24">
-                <h2>Działamy kompleksowo</h2>
-                <p>
+        <section id="oferta" class="flex flex-col bg-cream px-[89px] pt-[120px] pb-[160px]">
+            <div class="md:mx-[9%] mb-24">
+                <h5 class="mb-4">Oferta</h5>
+                <h2 class="mb-8">Działamy kompleksowo</h2>
+                <p class="max-w-[44rem] ">
                     Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.
                 </p>
-            </article>
-            <div class="grid grid-cols-3 gap-16">
+            </div>
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-16">
                 <!-- Card 1 -->
                 <div class="flex flex-col items-start bg-white px-10 py-12 h-[370px] rounded-[28px]" >
                     <img src="./assets/pen-icon.png" alt="icon" class="h-11">
                     <div class="mt-8">
-                        <h3>Projekty</h3>
+                        <h4 class="mb-3">Projekty</h4>
                         <p>
                             Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.
                         </p>
@@ -129,7 +129,7 @@
                 <div class="flex flex-col items-start bg-white px-10 py-12 h-[370px] rounded-[28px]" >
                     <img src="./assets/eye-ion.png" alt="icon" class="h-11 w-12 object-contain">
                     <div class="mt-8">
-                        <h3>Wizualizacje</h3>
+                        <h4 class="mb-3">Wizualizacje</h4>
                         <p>
                             Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.
                         </p>
@@ -140,7 +140,7 @@
                 <div class="flex flex-col items-start bg-white px-10 py-12 h-[370px] rounded-[28px]" >
                     <img src="./assets/stars-icon.png" alt="icon" class="h-11">
                     <div class="mt-8">
-                        <h3>Realizacje</h3>
+                        <h4 class="mb-3">Realizacje</h4>
                         <p>
                             Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.
                         </p>
@@ -149,22 +149,24 @@
                 </div>
             </div>
         </section>
-        <section id="firma" class="grid grid-cols-2 gap-16 items-center h-[45rem] bg-bottle-green">
-            <img src="./assets/o-firmie.png" alt="photo" class="object-cover w-full h-full min-h-0">
-            <div>
-                <h5>O firmie</h5>
-                <article class="pb-24">
-                    <h2>Tworzymy z pasją</h2>
+        <section id="firma" class="grid lg:grid-cols-2 gap-16 items-center lg:h-[45rem] bg-bottle-green">
+            <img src="./assets/o-firmie.png" alt="photo" class="object-cover w-full h-[30rem] lg:h-full min-h-0">
+            <div class="flex flex-col justify-center min-h-[30rem] mx-[89px] text-cream">
+                <h5 class="mb-4">O firmie</h5>
+                <article class="pb-20">
+                    <h2 class="mb-10">Tworzymy z pasją</h2>
                     <p>
                         Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.
                     </p>
                 </article>
-                <button type="button">Poznaj nas bliżej</button>
+                <button type="button" class="self-start mb-8">Poznaj nas bliżej</button>
             </div>
         </section>
         <section id="realizacje" class="bg-light-beige pt-[120px]">
-            <h5>Realizacje</h5>
-            <h2 class="mb-24">Nasze projekty</h2>
+            <div class="md:mx-[9%] mb-24">
+                <h5 class="mb-4">Realizacje</h5>
+                <h2>Nasze projekty</h2>
+            </div>
             <div id="gallery-container" class="relative roll-up overflow-hidden max-height-smooth">
                 <div id="masonry-grid" class="h-auto">
                     <div class="masonry-item masonry-sizer sm:two-columns lg:three-columns"><img src="assets/gallery/photo-01.png" alt="photo-01" class="w-full"></div>
@@ -186,25 +188,24 @@
                     </div>
                 </div>
             </div>
-           
             
         </section>
         <section id="instagram" class="bg-cream py-[60px] px-[89px]">
-            <div class="flex justify-between items-end bg-bottle-green text-cream mx-[9%] py-[120px] px-[110px]">
+            <div class="flex flex-col xl:flex-row gap-10 justify-between xl:items-end bg-bottle-green text-cream mx-[9%] py-[120px] px-[9%]">
                 <h3 class="leading-tight">
                     Zostańmy w kontakcie!<br>
                     Znajdziesz nas na Instagramie.
                 </h3>
-                <div>
-                    <p class="mb-6">
+                <div class="flex self-end xl:flex-col gap-6">
+                    <p class="min-w-[11rem]">
                         Śledź nasze<br>
                         najnowsze realizacje!
                     </p>
-                    <button type="button" class="bg-cream text-bottle-green">Instagram</button>
+                    <button type="button" class="bg-cream text-bottle-green self-start">Instagram</button>
                 </div>
             </div>
         </section>
-        <footer class="bg-dark-grey text-cream py-20 px-[89px]">
+        <footer id="kontakt" class="bg-dark-grey text-cream py-20 px-[89px]">
             <section id="kontakt" class="mx-[9%]">
                 <div class="flex items-center">
                     <img src="./assets/giarddesign-light.svg" alt="giarddesign logo" class="h-5">
