@@ -1,0 +1,53 @@
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}
+/* Animation classes */
+.right-to-center {
+    animation: slide-right-center 1200ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+.center-to-left {
+    animation: slide-center-left 1200ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+.left-to-center {
+    animation: slide-left-center 1200ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+.center-to-right {
+    animation: slide-center-right 1200ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/*  <----- to left */
+    /* 100    0 <-- 100 */
+@keyframes slide-right-center {
+    from {margin-left: 100%}
+    to {margin-left: 0}
+}
+    /* 100 <-- 0    100 */
+@keyframes slide-center-left {
+    from {margin-left: 0}
+    to {margin-left: -100%}
+}
+/*   -----> to righ */
+    /* 100 --> 0    100 */
+@keyframes slide-left-center {
+    from {margin-left: -100%}
+    to {margin-left: 0}
+}
+    /* 100    0 --> 100 */
+@keyframes slide-center-right {
+    from {margin-left: 0}
+    to {margin-left: 100%}
+}

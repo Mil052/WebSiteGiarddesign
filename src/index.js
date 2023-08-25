@@ -1,14 +1,14 @@
 import "./style.css";
-import { Carousel, initTE } from "tw-elements";
 import { connectGallery } from "./gallery";
 import { connectNavigation } from "./navigation";
+import { setCarousel } from "./carousel/carousel";
 
 window.onload = () => {
   // #header
   connectNavigation();
 
   // #intro
-  initTE({ Carousel });
+  const introCarousel = setCarousel('intro-carousel','intro_carousel_next', 'intro_carousel_previous', 7000);
 
   // #realizacje
   connectGallery();
