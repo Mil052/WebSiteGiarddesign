@@ -1,10 +1,26 @@
 import Masonry from 'masonry-layout';
- 
-export function connectGallery () {
-    const galleryContainer = document.getElementById('gallery-container');
-    const masonryGrid = document.getElementById('masonry-grid');
-    const galleryVievBtn = document.getElementById('gallery-view-btn');
-    const galleryCourtain = document.getElementById('gallery-courtain');
+
+// Roll-up / Roll-out Container Viev
+function rollContainerViev (container, content, courtain, button) {
+    //Full height is content height + 180px of #gallery_roller
+    const contentHeight = `${content.clientHeight + 180}px`;
+
+    const rolledUp = container.classList.toggle('roll-up');
+    if (rolledUp) {
+        container.style.removeProperty('max-height');
+        button.textContent = "Rozwiń";
+    } else {
+        container.style.setProperty('max-height', contentHeight);
+        button.textContent = "Zwiń";
+    }
+    courtain.classList.toggle('hide-background');
+}
+
+export function setGallery (containerId, masonryGridId, courtainId, toggleVievBtnId) {
+    const container = document.getElementById(containerId);
+    const masonryGrid = document.getElementById(masonryGridId);
+    const toggleVievBtn = document.getElementById(toggleVievBtnId);
+    const courtain = document.getElementById(courtainId);
 
     // Init Masonry Grid
     const masonry = new Masonry(masonryGrid, {
@@ -13,20 +29,5 @@ export function connectGallery () {
         gutter: 44
     });
 
-    // Roll-up / Roll-out view
-    const toggleGalleryVievHandler = () => {
-        const masonryGridHeight = masonryGrid.clientHeight;
-        const fullHeight = `${masonryGridHeight + 180}px`;
-        const rolledUp = galleryContainer.classList.toggle('roll-up');
-        if (rolledUp) {
-            galleryContainer.style.removeProperty('max-height');
-            galleryVievBtn.textContent = "Rozwiń";
-        } else {
-            galleryContainer.style.setProperty('max-height', fullHeight);
-            galleryVievBtn.textContent = "Zwiń";
-        }
-        galleryCourtain.classList.toggle('hide-background');
-    }
-
-    galleryVievBtn.addEventListener('click', toggleGalleryVievHandler);
+    toggleVievBtn.addEventListener('click', () => rollContainerViev (container, masonryGrid, courtain, toggleVievBtn));
 }

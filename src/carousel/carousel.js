@@ -76,7 +76,8 @@ export class Carousel {
         clearInterval(this.#autoplayInterval);
         this.#autoplayInterval = null;
     }
-
+    
+    // Manual handling Next Slide restarts the autoplay interval if set
     manualNextHandler = () => {
         this.#nextSlideHandler();
         // Reset autoplayInterval

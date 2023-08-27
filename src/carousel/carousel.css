@@ -11,6 +11,7 @@
 .inactive {
     display: none;
 }
+
 /* Animation classes */
 .right-to-center {
     animation: slide-right-center 1200ms ease-in-out;

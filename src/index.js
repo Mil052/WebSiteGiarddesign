@@ -1,15 +1,16 @@
 import "./style.css";
-import { connectGallery } from "./gallery";
-import { connectNavigation } from "./navigation";
+import { setGallery } from "./gallery";
+import { setNavigation } from "./navigation";
 import { setCarousel } from "./carousel/carousel";
+
 
 window.onload = () => {
   // #header
-  connectNavigation();
+  setNavigation();
 
   // #intro
   const introCarousel = setCarousel('intro-carousel','intro_carousel_next', 'intro_carousel_previous', 7000);
 
   // #realizacje
-  connectGallery();
+  setGallery('gallery-container', 'masonry-grid', 'roller-courtain', 'roller-btn');
 }

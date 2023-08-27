@@ -8,14 +8,14 @@
 </head>
 <body class="min-h-screen">
     <header class="bg-white fixed top-0 z-30 w-full">
-        <div class="flex justify-between items-center mx-[89px] h-[72px] bg-white">
+        <div class="relative flex justify-between items-center px-[89px] h-[72px] bg-white">
             <img src="./assets/giarddesign.svg" alt="giarddesign logo" class="h-5">
-            <button id="hamburger-button" class="sm:hidden">&#9776;</button>
-            <nav class="relative hidden sm:block">
+            <!-- <button id="hamburger-button" class="sm:hidden">&#9776;</button> -->
+            <nav id="main_navigation" class="hidden sm:block">
                 <ul class="flex gap-12 h-6">
                     <li>
                         <a id="link-oferta" class="after:inline-block after:w-3 after:h-3 after:bg-[url('./assets/arrow-down.svg')] after:ml-1 hover:cursor-pointer">Oferta</a>
-                        <ul id="nav-oferta" class="hidden absolute top-12 w-full justify-around bg-cream p-8 origin-top animate-open-scale">
+                        <ul id="sub-menu-oferta" class="hidden absolute gap-12 left-0 top-[72px] w-full justify-end bg-slate-100 px-[89px] py-8 origin-top animate-open-scale">
                             <li><a href="#oferta">Projekty</a></li>
                             <li><a href="#realizacje">Wizualizacje</a></li>
                             <li><a href="#realizacje">Realizacje</a></li>
@@ -24,7 +24,13 @@
                     <li><a href="#firma">O firmie</a></li>
                     <li><a href="#realizacje">Realizacje</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
-                    <li><img src="./assets/magnifier.svg" alt="search"></li>
+                    <li>
+                        <img id="link-search" src="./assets/magnifier.svg" alt="search">
+                        <div id="sub-menu-search" class="hidden absolute gap-12 left-0 top-[72px] w-full justify-end bg-slate-100 px-[89px] py-[19px] origin-top animate-open-scale">
+                            <input type="text" class="py-2 px-4 w-[310px]">
+                            <button type="button">SEARCH</button>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -151,9 +157,9 @@
                     <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-11.png" alt="photo-11" class="w-full"></div>
                     <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-12.png" alt="photo-12" class="w-full"></div>
                 </div>
-                <div class="h-[180px]">
-                    <div id="gallery-courtain" class="text-center absolute w-full bottom-0 pb-24 hide-background padding-top-smooth z-10 bg-gradient-to-t from-light-beige from-10% to-transparent">
-                        <button id="gallery-view-btn" class="border border-dark-grey">Rozwiń</button>
+                <div id="gallery_roller" class="h-[180px]">
+                    <div id="roller-courtain" class="text-center absolute w-full bottom-0 pb-24 hide-background padding-top-smooth z-10 bg-gradient-to-t from-light-beige from-10% to-transparent">
+                        <button id="roller-btn" class="border border-dark-grey">Rozwiń</button>
                     </div>
                 </div>
             </div>
