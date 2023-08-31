@@ -8,9 +8,9 @@ export class Carousel {
     #autoplayInterval = null;
     #autoplayIntervalDelay = 0;
 
-    constructor (containerId) {
+    constructor (containerId, itemClass) {
         console.log ('Remember to set position to RELATIVE and overflow to HIDDEN on container element !!!');
-        this.#carouselItems = document.querySelectorAll('#' + containerId + ' > .carousel-item');
+        this.#carouselItems = document.querySelectorAll('#' + containerId + ' > .' + itemClass);
         this.#itemsAmount = this.#carouselItems.length;
     }
 
@@ -97,8 +97,8 @@ export class Carousel {
     }
 }
 
-export function setCarousel (containerId, nextBtnId, prevBtnId, carouselInterval) {
-    const carousel = new Carousel(containerId);
+export function setCarousel (containerId, itemClass, nextBtnId, prevBtnId, carouselInterval) {
+    const carousel = new Carousel(containerId, itemClass);
     const nextButton = document.getElementById(nextBtnId);
     const previousButton = document.getElementById(prevBtnId);
 

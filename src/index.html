@@ -28,7 +28,7 @@
                         <img id="link-search" src="./assets/magnifier.svg" alt="search">
                         <div id="sub-menu-search" class="hidden absolute gap-12 left-0 top-[72px] w-full justify-end bg-slate-100 px-[89px] py-[19px] origin-top animate-open-scale">
                             <input type="text" class="py-2 px-4 w-[310px]">
-                            <button type="button">SEARCH</button>
+                            <button type="button" class="button-rounded">SEARCH</button>
                         </div>
                     </li>
                 </ul>
@@ -46,8 +46,8 @@
                                 <h1 class="mb-16">Nowoczesna aranżacja Twojego ogrodu</h1>
                                 <p class="mb-[72px]">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu..</p>
                                 <div>
-                                    <button class="bg-bottle-green border-bottle-green text-cream">Skontaktuj się z nami</button>
-                                    <button class="border-bottle-green text-bottle-green ml-9">Zobacz nasze realizacje</button>
+                                    <button class="button-rounded bg-bottle-green border-bottle-green text-cream">Skontaktuj się z nami</button>
+                                    <button class="button-rounded border-bottle-green text-bottle-green ml-9">Zobacz nasze realizacje</button>
                                 </div>
                             </div> 
                             <img src="./assets/intro-photo-1.png" class="object-cover w-full h-full min-h-0" alt="garden photo 01" />
@@ -61,8 +61,8 @@
                                 <h1 class="mb-16">Nowoczesna aranżacja Twojego ogrodu</h1>
                                 <p class="mb-[72px]">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu..</p>
                                 <div>
-                                    <button class="bg-bottle-green border-bottle-green text-cream">Skontaktuj się z nami</button>
-                                    <button class="border-bottle-green text-bottle-green ml-9">Zobacz nasze realizacje</button>
+                                    <button class="button-rounded bg-bottle-green border-bottle-green text-cream">Skontaktuj się z nami</button>
+                                    <button class="button-rounded border-bottle-green text-bottle-green ml-9">Zobacz nasze realizacje</button>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,6 @@
                     <button id="intro_carousel_next">Next</button>
                 </div>
             </div>
-
         </section>
         <section id="oferta" class="flex flex-col bg-cream px-[89px] pt-[120px] pb-[160px]">
             <div class="md:mx-[9%] mb-24">
@@ -134,7 +133,7 @@
                         Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.
                     </p>
                 </article>
-                <button type="button" class="self-start mb-8">Poznaj nas bliżej</button>
+                <button type="button" class="button-rounded self-start mb-8">Poznaj nas bliżej</button>
             </div>
         </section>
         <section id="realizacje" class="bg-light-beige pt-[120px]">
@@ -143,27 +142,38 @@
                 <h2>Nasze projekty</h2>
             </div>
             <div id="gallery-container" class="relative roll-up overflow-hidden max-height-smooth">
+                <div id="viewer" class="hidden fixed top-0 left-0 z-50 w-full h-screen semi-transparent">
+                    <div class="screen-distance bg-slate-100 overflow-hidden shadow-dark flex flex-col justify-between gap-4">
+                        <button type="button" id="viewer-close" class="h-9 w-9 flex-none self-end bg-[url('./assets/close_icon.svg')] hover:scale-110"></button>
+                        <div id="viewer-container" class="min-h-0">
+                            <!-- Gallery Content -->
+                        </div>
+                        <div class="self-center">
+                            <button type="button" id="viewer-previous" class="h-12 w-12 bg-[url('./assets/prev_icon.svg')] mr-20 hover:scale-110"></button>
+                            <button type="button" id="viewer-next" class="h-12 w-12 bg-[url('./assets/next_icon.svg')] ml-20 hover:scale-110"></button>
+                        </div>
+                    </div>
+                </div>
                 <div id="masonry-grid" class="h-auto">
-                    <div class="masonry-item masonry-sizer sm:two-columns lg:three-columns"><img src="assets/gallery/photo-01.png" alt="photo-01" class="w-full"></div>
-                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-02.png" alt="photo-02" class="w-full"></div>
-                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-03.png" alt="photo-03" class="w-full"></div>
-                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-04.png" alt="photo-04" class="w-full"></div>
-                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-05.png" alt="photo-05" class="w-full"></div>
-                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-06.png" alt="photo-06" class="w-full"></div>
-                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-07.png" alt="photo-07" class="w-full"></div>
-                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-08.png" alt="photo-08" class="w-full"></div>
-                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-09.png" alt="photo-09" class="w-full"></div>
-                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-10.png" alt="photo-10" class="w-full"></div>
-                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-11.png" alt="photo-11" class="w-full"></div>
-                    <div class="masonry-item sm:two-columns lg:three-columns"><img src="assets/gallery/photo-12.png" alt="photo-12" class="w-full"></div>
+                    <div class="masonry-item masonry-sizer sm:two-columns lg:three-columns" data-index="0"><img src="assets/gallery/photo-01.png" alt="photo-01" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns" data-index="1"><img src="assets/gallery/photo-02.png" alt="photo-02" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns" data-index="2"><img src="assets/gallery/photo-03.png" alt="photo-03" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns" data-index="3"><img src="assets/gallery/photo-04.png" alt="photo-04" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns" data-index="4"><img src="assets/gallery/photo-05.png" alt="photo-05" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns" data-index="5"><img src="assets/gallery/photo-06.png" alt="photo-06" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns" data-index="6"><img src="assets/gallery/photo-07.png" alt="photo-07" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns" data-index="7"><img src="assets/gallery/photo-08.png" alt="photo-08" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns" data-index="8"><img src="assets/gallery/photo-09.png" alt="photo-09" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns" data-index="9"><img src="assets/gallery/photo-10.png" alt="photo-10" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns" data-index="10"><img src="assets/gallery/photo-11.png" alt="photo-11" class="w-full"></div>
+                    <div class="masonry-item sm:two-columns lg:three-columns" data-index="11"><img src="assets/gallery/photo-12.png" alt="photo-12" class="w-full"></div>
                 </div>
                 <div id="gallery_roller" class="h-[180px]">
                     <div id="roller-courtain" class="text-center absolute w-full bottom-0 pb-24 hide-background padding-top-smooth z-10 bg-gradient-to-t from-light-beige from-10% to-transparent">
-                        <button id="roller-btn" class="border border-dark-grey">Rozwiń</button>
+                        <button id="roller-btn" class="button-rounded border-dark-grey">Rozwiń</button>
                     </div>
                 </div>
             </div>
-            
         </section>
         <section id="instagram" class="bg-cream py-[60px] px-[89px]">
             <div class="flex flex-col xl:flex-row gap-10 justify-between xl:items-end bg-bottle-green text-cream mx-[9%] py-[120px] px-[9%]">
@@ -176,7 +186,7 @@
                         Śledź nasze<br>
                         najnowsze realizacje!
                     </p>
-                    <button type="button" class="bg-cream text-bottle-green self-start">Instagram</button>
+                    <button type="button" class="button-rounded bg-cream text-bottle-green self-start">Instagram</button>
                 </div>
             </div>
         </section>
@@ -185,7 +195,7 @@
                 <div class="flex items-center">
                     <img src="./assets/giarddesign-light.svg" alt="giarddesign logo" class="h-5">
                     <p class="ml-auto mr-6">Daj znać, co możemy dla Ciebie zrobić!</p>
-                    <button type="button" class="bg-bottle-green">Skontaktuj się z nami</button>
+                    <button type="button" class="button-rounded bg-bottle-green">Skontaktuj się z nami</button>
                 </div>
                 <hr class="my-16">
                 <div class="flex justify-between">

@@ -66,8 +66,30 @@ font-family: 'Montserrat', sans-serif; */
         @apply font-inter text-base;
     }
 
-    button {
+    .button-rounded {
         @apply py-3 px-6 font-inter text-base rounded-full border;
+    }
+
+    .semi-transparent {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    .shadow-dark {
+        box-shadow: 3px 3px 16px 3px rgba(0, 0, 0, 0.4);
+    }
+    .screen-distance {
+        margin: 3rem;
+        padding: 2rem;
+        height: calc(100% - 6rem);
+    }
+
+    .viewer-item {
+        height: 100%;
+    }
+
+    .viewer-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
     }
 }
 
