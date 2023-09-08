@@ -1,8 +1,9 @@
 import "./style.css";
-import { setGallery, setGalleryViever } from "./gallery";
+import { setGallery } from "./gallery";
 import { setImgViewer } from "./imageViewer";
 import { setNavigation } from "./navigation";
-import { setCarousel } from "./carousel/carousel";
+import { setMobileMenu} from "./mobileMenu";
+import { setCarousel, adjustCarouselItemsToScreenSize } from "./carousel/carousel";
 
 
 window.onload = () => {
@@ -11,6 +12,7 @@ window.onload = () => {
 
   // #intro
   const introCarousel = setCarousel('intro-carousel', 'carousel-item', 'intro_carousel_next', 'intro_carousel_previous', 7000);
+  adjustCarouselItemsToScreenSize(introCarousel, 'carousel-item', 1024);
 
   // #realizacje
   setGallery('gallery-container', 'masonry-grid', 'roller-courtain', 'roller-btn');
@@ -21,4 +23,8 @@ window.onload = () => {
     const elementIndex = element.dataset.index;
     element.addEventListener('click', () => openViewer(elementIndex));
   });
+
+  // #mobile menu
+  setMobileMenu('mobile_navigation_container', 'mobile_navigation', 'hamburger-button');
+
 }

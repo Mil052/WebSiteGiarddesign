@@ -1,17 +1,26 @@
 import './carousel.css';
 
 export class Carousel {
+    #container;
+    #itemClassName;
     #carouselItems;
     #itemsAmount;
     #currentItemIndex = 0;
+    #animationTimeout;
     #animationPending = false;
     #autoplayInterval = null;
     #autoplayIntervalDelay = 0;
 
-    constructor (containerId, itemClass) {
+    constructor (containerId, itemClassName) {
         console.log ('Remember to set position to RELATIVE and overflow to HIDDEN on container element !!!');
-        this.#carouselItems = document.querySelectorAll('#' + containerId + ' > .' + itemClass);
+        this.#container = document.getElementById(containerId);
+        this.#carouselItems = this.#container.querySelectorAll('.' + itemClassName);
         this.#itemsAmount = this.#carouselItems.length;
+        this.#itemClassName = itemClassName;
+    }
+
+    get container () {
+        return this.#container;
     }
 
     #slideItemLeft = (newItem, previousItem) => {
@@ -21,7 +30,7 @@ export class Carousel {
         previousItem.classList.add('center-to-left');
         this.#animationPending = true;
 
-        setTimeout(() => {
+        this.#animationTimeout = setTimeout(() => {
             // Remove animation + hide previous item
             previousItem.classList.replace('active', 'inactive');
             newItem.classList.remove('right-to-center');
@@ -35,9 +44,10 @@ export class Carousel {
         // Add animation
         newItem.classList.add('left-to-center');
         previousItem.classList.add('center-to-right');
+
         this.#animationPending = true;
 
-        setTimeout(() => {
+        this.#animationTimeout = setTimeout(() => {
             // Remove animation + hide previous item
             previousItem.classList.replace('active', 'inactive');
             newItem.classList.remove('left-to-center');
@@ -95,6 +105,21 @@ export class Carousel {
             this.#autoplayInterval = setInterval(this.#nextSlideHandler, this.#autoplayIntervalDelay);
         }
     }
+    
+    resetCarousel = () => {
+        clearTimeout(this.#animationTimeout);
+        this.#animationPending = false;
+        // Get new list of carousel items
+        this.#carouselItems = this.#container.querySelectorAll('.' + this.#itemClassName);
+        this.#itemsAmount = this.#carouselItems.length;
+        // Reset all items class names to default values
+        this.#carouselItems.forEach(item => {
+            item.className = this.#itemClassName + " inactive";
+        });
+        // Start carousel from index 0
+        this.#currentItemIndex = 0;
+        this.#carouselItems[0].classList.replace('inactive', 'active');
+    }
 }
 
 export function setCarousel (containerId, itemClass, nextBtnId, prevBtnId, carouselInterval) {
@@ -110,6 +135,25 @@ export function setCarousel (containerId, itemClass, nextBtnId, prevBtnId, carou
     }
 
     return carousel;
+}
+
+export function adjustCarouselItemsToScreenSize (carouselObject, carouselItemClass, breakpoint) {
+    //   For small screen items add prefix 'sm-' to carousel item class name in HTML
+    const smallScreenCarouselItemClass = 'sm-' + carouselItemClass;
+    const smallScreenCarouselItems = carouselObject.container.querySelectorAll('.' + smallScreenCarouselItemClass);
+    const queryString = '(min-width: ' + breakpoint + 'px)';
+    const mediaQuery = window.matchMedia(queryString);
+
+    const toggleSmallScreenCarouselItems = (event) => {
+        if (event.matches) {
+            smallScreenCarouselItems.forEach(item => item.className = smallScreenCarouselItemClass);
+        } else {
+            smallScreenCarouselItems.forEach(item => item.className = carouselItemClass);
+        }
+        carouselObject.resetCarousel();
+    }
+
+    mediaQuery.addEventListener('change', toggleSmallScreenCarouselItems);
 }
 
 
