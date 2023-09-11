@@ -143,7 +143,13 @@ export function adjustCarouselItemsToScreenSize (carouselObject, carouselItemCla
     const smallScreenCarouselItems = carouselObject.container.querySelectorAll('.' + smallScreenCarouselItemClass);
     const queryString = '(min-width: ' + breakpoint + 'px)';
     const mediaQuery = window.matchMedia(queryString);
-
+    
+    // Initial check of screen size - adjust carusel items if needed:
+    if (window.innerWidth < breakpoint) {
+        smallScreenCarouselItems.forEach(item => item.className = carouselItemClass);
+        carouselObject.resetCarousel();
+    }
+    // Set event listener for window changes:
     const toggleSmallScreenCarouselItems = (event) => {
         if (event.matches) {
             smallScreenCarouselItems.forEach(item => item.className = smallScreenCarouselItemClass);

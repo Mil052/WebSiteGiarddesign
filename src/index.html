@@ -33,7 +33,6 @@
                 </ul>
             </nav>
             <button id="hamburger-button" class="md:hidden text-5xl">&#9776;</button>
-            <!-- &times -->
         </div>
         <div id="mobile_navigation_container" class="fixed top-[72px] hidden md:hidden h-screen-header w-full semi-transparent">
             <nav id="mobile_navigation" class="bg-slate-100 px-8 py-12 h-full min-w-[70%] w-fit max-w-[90%] transition-transform-nav mobile-nav-close">
@@ -69,8 +68,8 @@
                                 <h1 class="mb-8 sm:mb-16">Nowoczesna aranżacja Twojego ogrodu</h1>
                                 <p class="mb-8 sm:mb-16">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu..</p>
                                 <div>
-                                    <button class="button-rounded bg-bottle-green border-bottle-green text-cream my-3 mr-9 min-w-[232px]">Skontaktuj się z nami</button>
-                                    <button class="button-rounded border-bottle-green text-bottle-green my-3 min-w-[232px]">Zobacz nasze realizacje</button>
+                                    <a href="#kontakt"><button class="button-rounded bg-bottle-green border-bottle-green text-cream my-3 mr-9 min-w-[232px]">Skontaktuj się z nami</button></a>
+                                    <a href="#realizacje"><button class="button-rounded border-bottle-green text-bottle-green my-3 min-w-[232px]">Zobacz nasze realizacje</button></a>
                                 </div>
                             </div> 
                             <img src="./assets/intro-photo-1.png" class="hidden lg:block object-cover w-full h-full min-h-0" alt="garden photo 01" />
@@ -87,8 +86,8 @@
                                 <h1 class="mb-8 sm:mb-16">Kompleksowa obsługa.<br>Projektowanie i realizacja ogrodów.</h1>
                                 <p class="mb-8 sm:mb-16">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu..</p>
                                 <div>
-                                    <button class="button-rounded bg-bottle-green border-bottle-green text-cream my-3 mr-9 min-w-[232px]">Skontaktuj się z nami</button>
-                                    <button class="button-rounded border-bottle-green text-bottle-green my-3 min-w-[232px]">Zobacz nasze realizacje</button>
+                                    <a href="#kontakt"><button class="button-rounded bg-bottle-green border-bottle-green text-cream my-3 mr-9 min-w-[232px]">Skontaktuj się z nami</button></a>
+                                    <a href="#realizacje"><button class="button-rounded border-bottle-green text-bottle-green my-3 min-w-[232px]">Zobacz nasze realizacje</button></a>
                                 </div>
                             </div>
                             <img src="./assets/intro-photo-2.png" class="hidden lg:block object-cover w-full h-full min-h-0" alt="garden photo 02"/>
@@ -99,15 +98,10 @@
                         <img src="./assets/intro-photo-2.png" class="object-cover w-full h-full min-h-0" alt="garden photo 01" />
                     </div>
             </div>
-
             <!-- Carousel controls -->
-            <div class="absolute bottom-0 right-0 flex  bg-cream">
-                <div>
-                    <button id="intro_carousel_previous">Previous</button>
-                </div>
-                <div>
-                    <button id="intro_carousel_next">Next</button>
-                </div>
+            <div class="absolute -bottom-16 sm:bottom-0 right-0 flex bg-light-beige sm:bg-cream">
+                <button id="intro_carousel_previous" class="m-4 w-8 h-8 bg-[url('./assets/arrow_left_icon.svg')] hover:scale-110"></button>
+                <button id="intro_carousel_next" class="m-4 w-8 h-8 bg-[url('./assets/arrow_right_icon.svg')] hover:scale-110"></button>
             </div>
         </section>
         <section id="oferta" class="flex flex-col bg-cream px-6 sm:px-20 pt-[120px] pb-[160px]">
@@ -128,7 +122,7 @@
                             Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.
                         </p>
                     </div>
-                    <a href="#" class="mt-auto border-b-2 border-bottle-green text-bottle-green after:inline-block after:w-5 after:h-4 after:bg-[url('./assets/arrow-right.svg')] after:bg-contain after:ml-3 after:align-middle">Dowiedz się więcej</a>
+                    <a href="#firma" class="mt-auto border-b pb-1 border-bottle-green text-bottle-green after:inline-block after:w-5 after:h-4 after:bg-[url('./assets/arrow-right.svg')] after:bg-contain after:ml-3 after:align-middle">Dowiedz się więcej</a>
                 </div>
                 <!-- Card 2 -->
                 <div class="flex flex-col items-start bg-white px-10 py-12 h-[370px] rounded-[28px]" >
@@ -139,7 +133,7 @@
                             Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.
                         </p>
                     </div>
-                    <a href="#" class="mt-auto border-b-2 border-bottle-green text-bottle-green after:inline-block after:w-5 after:h-4 after:bg-[url('./assets/arrow-right.svg')] after:bg-contain after:ml-3 after:align-middle">Dowiedz się więcej</a>
+                    <a href="#oferta" class="mt-auto border-b pb-1 border-bottle-green text-bottle-green after:inline-block after:w-5 after:h-4 after:bg-[url('./assets/arrow-right.svg')] after:bg-contain after:ml-3 after:align-middle">Dowiedz się więcej</a>
                 </div>
                 <!-- Card 3 -->
                 <div class="flex flex-col items-start bg-white px-10 py-12 h-[370px] rounded-[28px]" >
@@ -150,7 +144,7 @@
                             Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.
                         </p>
                     </div>
-                    <a href="#" class="mt-auto border-b-2 border-bottle-green text-bottle-green after:inline-block after:w-5 after:h-4 after:bg-[url('./assets/arrow-right.svg')] after:bg-contain after:ml-3 after:align-middle">Dowiedz się więcej</a>
+                    <a href="#realizacje" class="mt-auto border-b pb-1 border-bottle-green text-bottle-green after:inline-block after:w-5 after:h-4 after:bg-[url('./assets/arrow-right.svg')] after:bg-contain after:ml-3 after:align-middle">Dowiedz się więcej</a>
                 </div>
             </div>
         </section>
